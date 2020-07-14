@@ -24,9 +24,14 @@ $ npm install --save-dev react react-dom
 $ npm install --save-dev react-router react-router-dom
 ```
 
-- babel-plugin-react-html-attrsをインストールする(JSXではclassNamesを使うところ、classを使えるようにする)
+- ~~babel-plugin-react-html-attrsをインストールする(JSXではclassNamesを使うところ、classを使えるようにする)~~ これは今回使えなくてclassnamesで対応したので使わず...
 ```
 $ npm install --save-dev babel-plugin-react-html-attrs
+```
+
+- JSXでclass定義のためにclassnamesをインストール
+```
+npm install --save-dev classnames
 ```
 
 - @types/react-domが必要と言われたので、、、
@@ -37,6 +42,11 @@ $ npm install @types/react-dom
 - @types/react-router-domが必要と言われたので、、、
 ```
 $ npm install @types/react-router-dom
+```
+
+- @types/classnamesが必要と言われたので、、、
+```
+npm install @types/classnames
 ```
 
 - babelでbind()を省略する際の記法で必要となったため、@babel/plugin-proposal-class-propertiesをインストール(.bind(this)関数の省略について)

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import className from "classnames"
 
 class Layout extends React.Component {
     navigate = () => {
@@ -15,12 +16,12 @@ class Layout extends React.Component {
         <h1>Welcome!</h1>
         {this.props.children}
         <Link to="/archives">
-          <button class="btn btn-danger">archives</button>
+          <button className={"btn btn-danger"}>archives</button>
         </Link>
         <Link to="/settings">
-          <button class="btn btn-success">settings</button>
+          <button className={"btn btn-success"}>settings</button>
         </Link>
-        <button class="btn btn-info" onClick={this.navigate}>
+        <button className={"btn btn-info"} onClick={this.navigate}>
           featured
         </button>
       </div>

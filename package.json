@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.config.js --watch",
-    "webpack-server": "./node_modules/.bin/webpack-dev-server --content-base dist --mode development"
+    "webpack-server": "./node_modules/.bin/webpack-dev-server --content-base dist --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.5"
+    "@types/react-router-dom": "^5.1.5",
+    "classnames": "^2.2.6"
   }
 }
