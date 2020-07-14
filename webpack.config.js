@@ -27,6 +27,7 @@ module.exports = {
             options: {
               presets: ["@babel/preset-react", "@babel/preset-env"],
               plugins: [
+                ['react-html-attrs'],
                 ["@babel/plugin-proposal-class-properties", { loose: true }],
               ],
             },
