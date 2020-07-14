@@ -44,3 +44,19 @@ $ npm install @types/react-router-dom
 $  npm install --save-dev @babel/plugin-proposal-class-properties
 ```
 
+## 補足
+### react-router-dom
+react-router-domからインポート
+#### Router,Route,Linkとは
+Routerが親タグでRouteを作成。
+Routeでpathとcomponentを紐づけ。
+Linkで紐づけたconponentをpropsに入れますよ。みたいな感じかな？
+- Router
+  - Route
+- Link
+
+#### withRouter
+componentクラスに対して`export default withRouter(Layout);`のようにすると、
+propsに「history,location,match,staticContext」等を持っている。
+今回は履歴管理でhistory()で履歴を残している。
+逆にreplace()を使うことで履歴が残らない。(※前のボタンの履歴)
