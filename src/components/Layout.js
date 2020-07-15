@@ -2,6 +2,9 @@ import React from "react";
 import { Link, withRouter, NavLink } from "react-router-dom";
 import className from "classnames";
 
+import Nav from "./Nav";
+import Footer from "./Footer";
+
 class Layout extends React.Component {
   navigate = () => {
     console.log(this.props);
@@ -13,6 +16,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
+        <Nav />
         <h1>Welcome!</h1>
         {this.props.children}
         <Link
@@ -37,6 +41,7 @@ class Layout extends React.Component {
         <button className={"btn btn-info"} onClick={this.navigate}>
           featured
         </button>
+        <Footer />
       </div>
     );
   }
