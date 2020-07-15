@@ -1,5 +1,5 @@
 const config = {
-  addSpots: [
+  adSpots: [
     "Ad spot text1",
     "Ad spot text2",
     "Ad spot text3",

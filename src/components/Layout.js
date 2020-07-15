@@ -14,33 +14,12 @@ class Layout extends React.Component {
     this.props.history.replace("/");
   };
   render() {
+    const { location } = this.props;
     return (
       <div>
-        <Nav />
-        <h1>Welcome!</h1>
+        <Nav location={location}/>
+        <h1>Welcome! News.Net</h1>
         {this.props.children}
-        <Link
-          to="/archives/some-other-articles?date=yesterday&filter=none"
-          className={"btn btn-warning"}
-        >
-          archives (some other articles)
-        </Link>
-        <Link to="/archives?date=today&filter=hot" className={"btn btn-danger"}>
-          archives
-        </Link>
-        <NavLink
-          to="/settings/main"
-          className={"btn btn-success"}
-          activeClassName="btn-danger"
-        >
-          settings
-        </NavLink>
-        <Link to="/settings/extra">
-          <button className={"btn btn-success"}>settings</button>
-        </Link>
-        <button className={"btn btn-info"} onClick={this.navigate}>
-          featured
-        </button>
         <Footer />
       </div>
     );

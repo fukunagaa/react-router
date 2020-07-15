@@ -4,16 +4,19 @@ import config from "../config";
 
 class Featured extends React.Component {
   render() {
-    const keys = Object.keys(config.articles);
+    const articles = config.articles;
+    const adSpots = config.adSpots;
+    const keys = Object.keys(articles);
     const article = keys[Math.round( Math.random() * ( keys.length - 1))];
-    const content = config.articles[article];
+    const content = articles[article];
+    const adSpot = adSpots[Math.round( Math.random() * ( adSpots.length - 1))]
     return (
       <div>
       <h1>Featured</h1>
       <div className={"row"}>
       <div className={"col-lg-12"}>
         <div className={"well text-center"}>
-          Ad spot goes here
+          {adSpot}
         </div>
       </div>
     </div>
