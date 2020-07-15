@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, NavLink } from "react-router-dom";
 import className from "classnames";
 
 class Layout extends React.Component {
@@ -24,9 +24,13 @@ class Layout extends React.Component {
         <Link to="/archives?date=today&filter=hot" className={"btn btn-danger"}>
           archives
         </Link>
-        <Link to="/settings/main">
-          <button className={"btn btn-success"}>settings</button>
-        </Link>
+        <NavLink
+          to="/settings/main"
+          className={"btn btn-success"}
+          activeClassName="btn-danger"
+        >
+          settings
+        </NavLink>
         <Link to="/settings/extra">
           <button className={"btn btn-success"}>settings</button>
         </Link>
