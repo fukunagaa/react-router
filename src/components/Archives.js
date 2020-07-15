@@ -12,7 +12,12 @@ class Archives extends React.Component {
       query.get("date") +
       ", filter=" +
       query.get("filter");
-    return <h1>Archives ({message})</h1>;
+    return (
+      <div>
+        <h1>Archives</h1>
+        <h2>{message}</h2>
+      </div>
+    );
   }
 }
 

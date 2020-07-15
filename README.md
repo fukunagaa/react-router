@@ -64,9 +64,28 @@ Linkで紐づけたconponentをpropsに入れますよ。みたいな感じか�
 - Router
   - Route
 - Link
+- NavLink
+
+#### Route
+pathに書かれた内容の時だけ表示を行う。componentに書かれた内容で動作を分けることができる。
+exactをつけると完全一致。
+pathに「:article」をつけると部分一致
+pathに「:mode(main|extra)」をつけると、mainまたはextraの時のみ動作する。 => {this.props.match.params.mode}を使えるようになる。
+
+#### Link
+toで押下時のpathを指定することが出来る。
+
+#### NavLink
+Linkの拡張版みたいなイメージ。
+activeClassNameをつけることで、active時にclassを変更できる。
 
 #### withRouter
 componentクラスに対して`export default withRouter(Layout);`のようにすると、
 propsに「history,location,match,staticContext」等を持っている。
 今回は履歴管理でhistory()で履歴を残している。
 逆にreplace()を使うことで履歴が残らない。(※前のボタンの履歴)
+
+### URLSearchParams
+クエリパラメータを取得に使用。
+これが使えないライブラリはquery-string等を使って対応。
+

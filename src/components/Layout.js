@@ -1,6 +1,9 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, NavLink } from "react-router-dom";
 import className from "classnames";
+
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 class Layout extends React.Component {
   navigate = () => {
@@ -11,28 +14,13 @@ class Layout extends React.Component {
     this.props.history.replace("/");
   };
   render() {
+    const { location } = this.props;
     return (
       <div>
-        <h1>Welcome!</h1>
+        <Nav location={location}/>
+        <h1>Welcome! News.Net</h1>
         {this.props.children}
-        <Link
-          to="/archives/some-other-articles?date=yesterday&filter=none"
-          className={"btn btn-warning"}
-        >
-          archives (some other articles)
-        </Link>
-        <Link to="/archives?date=today&filter=hot" className={"btn btn-danger"}>
-          archives
-        </Link>
-        <Link to="/settings/main">
-          <button className={"btn btn-success"}>settings</button>
-        </Link>
-        <Link to="/settings/extra">
-          <button className={"btn btn-success"}>settings</button>
-        </Link>
-        <button className={"btn btn-info"} onClick={this.navigate}>
-          featured
-        </button>
+        <Footer />
       </div>
     );
   }
